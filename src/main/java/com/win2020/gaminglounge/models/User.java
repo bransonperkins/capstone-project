@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name = "users")
 public class User {
 
+    // test branching
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
