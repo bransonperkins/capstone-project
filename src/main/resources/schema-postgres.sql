@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS users;
+CREATE TABLE users(id PRIMARY KEY, username VARCHAR(255), email VARCHAR(255));

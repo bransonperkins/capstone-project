@@ -6,8 +6,6 @@ import javax.persistence.*;
 @Table(name = "users")
 public class User {
 
-    // test branching
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -15,6 +13,7 @@ public class User {
     @Column(name = "username")
     private String username;
 
+    @Column(name = "email")
     private String email;
 
     public User() {}

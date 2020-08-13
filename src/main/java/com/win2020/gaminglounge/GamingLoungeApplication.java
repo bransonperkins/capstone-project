@@ -12,22 +12,22 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
-public class GamingLoungeApplication implements CommandLineRunner {
+public class GamingLoungeApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GamingLoungeApplication.class, args);
     }
 
-    @Autowired
-    private UserRepository userRepository;
-
-    // test to make sure users can be added to the database
-    @Override
-    public void run(String... args) throws Exception {
-        this.userRepository.save(new User("mizew", "bransonperkins@gmail.com"));
-        this.userRepository.save(new User("nelley", "noellebrinkley@gmail.com"));
-        this.userRepository.save(new User("carlton", "carlton@gmail.com"));
-    }
+//    @Autowired
+//    private UserRepository userRepository;
+//
+//    // test to make sure users can be added to the database
+//    @Override
+//    public void run(String... args) throws Exception {
+//        this.userRepository.save(new User("mizew", "bransonperkins@gmail.com"));
+//        this.userRepository.save(new User("nelley", "noellebrinkley@gmail.com"));
+//        this.userRepository.save(new User("carlton", "carlton@gmail.com"));
+//    }
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
