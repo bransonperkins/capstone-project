@@ -8,6 +8,8 @@ import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 
 class NameComponent extends React.Component {
+
+    // name component - comment test
     constructor(props) {
         super(props);
         this.state = {
