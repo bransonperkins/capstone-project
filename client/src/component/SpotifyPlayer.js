@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Container, Row, Col, Jumbotron } from 'reactstrap';
+import { Button, ButtonGroup } from 'reactstrap';
 
 class SpotifyPlayer extends Component{
     constructor(props){
@@ -147,34 +149,59 @@ class SpotifyPlayer extends Component{
          } = this.state;
       
          return (
-          <div className="App">
-            <div className="">
+          <div className="App container h-75">
+            <div>
+            <Jumbotron fluid className="bg-dark">
+            <h2>Listen to your Spotify playlist</h2>
               <h2>Now Playing</h2>
-              <p>A Spotify Web Playback API Demo.</p>
+            </Jumbotron>
+
+              
             </div>
       
-            {/* {error && <p>Error: {error}</p>} */}
+             {error && <p> {error}</p>} 
       
             {loggedIn ?
             (<div>
+              <Container className="themed-container">
+                <Row>
+                <Col xs="6" sm="4">
+                <img src= {albumCover} alt="Album Cover"/>
+                </Col>
+                <Col xs="6" sm="4">
+                <p>Artist: {artistName}</p>
+              <p>Track: {trackName}</p>
+              <p>Album: {albumName}</p>
+                </Col>
+                <Col sm="4">
+                <ButtonGroup vertical>
+
+                <Button color="info" onClick={() => this.onPrevClick()}>Previous</Button >
+                <Button color="danger" onClick={() => this.onPlayClick()}>{playing ? "Pause" : "Play"}</Button>
+                <Button color="warning" onClick={() => this.onNextClick()}>Next</Button>
+                  </ButtonGroup>
+                </Col>
+                </Row>
+              </Container>
     
-              <img src= {albumCover} />
+              {/* <img src= {albumCover} />
               <p>Artist: {artistName}</p>
               <p>Track: {trackName}</p>
               <p>Album: {albumName}</p>
               <p>
-                <button onClick={() => this.onPrevClick()}>Previous</button>
-                <button onClick={() => this.onPlayClick()}>{playing ? "Pause" : "Play"}</button>
+                <button  onClick={() => this.onPrevClick()}>Previous</button>
+                <button  onClick={() => this.onPlayClick()}>{playing ? "Pause" : "Play"}</button>
                 <button onClick={() => this.onNextClick()}>Next</button>
-              </p>
+              </p> */}
             </div>)
             :
             (<div>
               <p className="App-intro">
                 Enter your Spotify access token. Get it from{" "}
-                <a href="https://beta.developer.spotify.com/documentation/web-playback-sdk/quick-start/#authenticating-with-spotify" target="blank">
-                  here
-                </a>.
+                
+                <a className="btn btn-success btn-link"href="https://beta.developer.spotify.com/documentation/web-playback-sdk/quick-start/#authenticating-with-spotify" target="blank">
+                 Spotify Web Playback SDK ACCESS TOKEN.
+                </a>
               </p>
               <p>
                 <input type="text" value={token} onChange={e => this.setState({ token: e.target.value })} />
