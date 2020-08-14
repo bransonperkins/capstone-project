@@ -39,16 +39,13 @@ class NameComponent extends React.Component {
         return (
             <div>
                 <Dialog open={this.state.open} aria-labelledby="form-dialog-title">
-                    <DialogTitle id="form-dialog-title">Chat</DialogTitle>
+                    <DialogTitle id="form-dialog-title">Start chatting with other gamers!</DialogTitle>
                     <DialogContent>
-                        <DialogContentText>
-                            Please enter your name
-                        </DialogContentText>
                         <TextField
                             autoFocus
                             margin="dense"
                             id="name"
-                            label="Name"
+                            label="Username"
                             type="name" onChange={this.setEnteredName}
                             fullWidth
                         />

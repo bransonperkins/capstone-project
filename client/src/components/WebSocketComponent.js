@@ -54,7 +54,7 @@ class WebSocketComponent extends React.Component {
           <div>
               <NameComponent setName={this.setName}/>
               <div className="align-center">
-                  <h1>Welcome to Web Sockets</h1>
+                  <h1>Gaming Lounge</h1>
                   <br/><br/>
               </div>
               <div className="align-center">
