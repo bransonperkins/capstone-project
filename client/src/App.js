@@ -14,7 +14,7 @@ function App() {
             <WebSocketComponent />
         </div>
         <div>
-          <SpotifyPlayer />
+            <SpotifyPlayer />
         </div>
       </header>
     </div>
