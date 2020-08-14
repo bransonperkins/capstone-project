@@ -10,7 +10,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div>
-            <UserComponent />
+          {/* Commenting out UserComponent for now.  This was only for testing spring boot and react connectivity */}
+            {/* <UserComponent /> */}
             <WebSocketComponent />
         </div>
         <div>
