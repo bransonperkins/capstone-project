@@ -3,9 +3,9 @@ import * as $ from "jquery";
 import { authEndpoint, clientId, redirectUri, scopes } from "./config";
 import hash from "./hash";
 import SpotifyPlayer from "./components/SpotifyPlayer.js";
-import logo from "./logo.svg";
 import "./App.css";
 import "./css/SpotifyPlayer.css";
+import WebSocketComponent from './components/WebSocketComponent.js';
 
 class App extends Component {
   constructor() {
@@ -91,7 +91,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           {!this.state.token && (
             <a
               className="btn btn--loginApp-link"
@@ -114,6 +113,7 @@ class App extends Component {
               You need to be playing a song on Spotify, for something to appear here.
             </p>
           )}
+          <WebSocketComponent/>
         </header>
       </div>
     );
