@@ -1,0 +1,22 @@
+/** Now Playing **/
+
+.now-playing__name {
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+}
+
+.now-playing__artist {
+    margin-bottom: 1em;
+}
+
+.now-playing__img {
+    float: left;
+    margin-right: 10px;
+    text-align: right;
+    width: 45%;
+}
+
+#now-playing__side {
+    margin-left: 0%;
+    width: 45%;
+}
