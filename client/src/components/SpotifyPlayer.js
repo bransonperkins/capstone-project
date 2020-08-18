@@ -1,6 +1,7 @@
 import React from 'react';
 import "../css/SpotifyPlayer.css";
 
+
 const SpotifyPlayer = props => {
   
   return (
@@ -12,6 +13,7 @@ const SpotifyPlayer = props => {
       <p> By: {props.item.artists[0].name}</p>
     </div>
   </div>
+
   );
 }
 
