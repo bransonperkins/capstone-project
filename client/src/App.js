@@ -6,6 +6,8 @@ import SpotifyPlayer from "./components/SpotifyPlayer.js";
 import "./App.css";
 import "./css/SpotifyPlayer.css";
 import WebSocketComponent from './components/WebSocketComponent.js';
+import { Jumbotron, Button } from "reactstrap";
+
 
 class App extends Component {
   constructor() {
@@ -91,15 +93,23 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+       
+         
+        <WebSocketComponent/>
+           
           {!this.state.token && (
+            <Button className="spotify-btn">
+
+
             <a
-              className="btn btn--loginApp-link"
+              className="btn--loginApp-link"
               href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
                 "%20"
               )}&response_type=token&show_dialog=true`}
             >
-              Login to Spotify
+              <span className="spotify-login">Login to Spotify</span>
             </a>
+            </Button>
           )}
           {this.state.token && !this.state.no_data && (
             <SpotifyPlayer
@@ -113,8 +123,9 @@ class App extends Component {
               You need to be playing a song on Spotify, for something to appear here.
             </p>
           )}
-          <WebSocketComponent/>
+          
         </header>
+           
       </div>
     );
   }
