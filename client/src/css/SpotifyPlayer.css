@@ -1,22 +1,39 @@
-/** Now Playing **/
 
-.now-playing__name {
-    font-size: 1.5em;
-    margin-bottom: 0.2em;
-}
 
-.now-playing__artist {
-    margin-bottom: 1em;
+img{
+    width: 200px;
+    height: 200px;
 }
-
-.now-playing__img {
-    float: left;
-    margin-right: 10px;
-    text-align: right;
-    width: 45%;
-}
-
-#now-playing__side {
-    margin-left: 0%;
-    width: 45%;
-}
+.songRow {
+    margin-left: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    color: white;
+  }
+  
+  .songRow:hover {
+    cursor: pointer;
+    background-color: black;
+    opacity: 0.8;
+  }
+  
+  .songRow__info {
+    margin-left: 20px;
+  }
+  
+  .songRow__info > h1 {
+    font-size: 16px;
+  }
+  
+  .songRow__info > p {
+    font-size: 14px;
+    margin-top: 3px;
+    color: gray;
+  }
+  
+  .songRow__album {
+    max-width: 50px;
+    max-height: 20px;
+  }
